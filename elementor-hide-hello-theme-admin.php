@@ -1,8 +1,10 @@
 <?php
 
 /*
+*
 * Removes the new "Hello" admin menu that was added in version 3.4.0 on 5/5/25.
 * Places Theme settings back under Appearance where it came from.
+*
 */
 
 add_action('admin_menu', function() {
@@ -11,7 +13,7 @@ add_action('admin_menu', function() {
 
     // Add "Theme Settings" back under Appearance menu
     add_submenu_page(
-        'themes.php', // Parent slug (Appearance)
+        'themes.php', // Parent slug (Appearance) Use 'elementor' to move to 'Elementor' menu
         'Theme Settings', // Page title
         'Theme Settings', // Menu title
         'manage_options', // Capability
